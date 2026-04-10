@@ -1,0 +1,1245 @@
+@import url('./fonts/fonts.css');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #0D2B52;
+    color: #FFF;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-position: 
+        0 0, 
+        0 0;
+    position: relative;
+    overflow-x: hidden;
+}
+
+h1{
+    color: #ffc857;
+    text-align: left;
+    font-family: "R&C Basic Full", Public Sans, sans-serif;
+    font-size: 6rem;
+    word-spacing: -20px;
+}
+
+h2{
+    color: #a8f0ae;
+    text-align: left;
+    font-family: "R&C Basic Full", Public Sans, sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+p{
+    color: #dbe4ee;
+    text-align: left;
+    margin-top: 0;
+    margin-left: 15px;
+    font-family: "R&C Basic Full", Public Sans, sans-serif;
+    font-size: 2.5rem;
+    width: 750px;
+    line-height: 1.5;
+    letter-spacing: 0.005em;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+#nagpur{
+    position: relative;
+    bottom: 23px;
+    color: #a8f0ae;
+    font-size: 6rem;
+    font-family: "R&C Basic Full", Public Sans, sans-serif;
+    font-weight: bold;
+}
+
+#by-teenagers{
+    margin-left: 10px;
+    margin-right: 10px;
+    min-height: auto;
+    max-height: auto;
+    max-width: 200px;
+    display: inline-flex;
+    background-color: #fe8e86;
+    color: #0D2B52;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    transform: none;
+    transform-origin: center center;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+}
+
+#by-teenagers:hover{
+    transform: scale(1.05);
+    cursor:default;
+    background-color: #bd4c44;
+}
+
+#for-teenagers{
+    display: inline-flex;
+    max-width: 200px;
+    background-color: #a8f0ae;
+    color: #0D2B52;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 1.2rem;
+    justify-content: center;
+    align-items: center;
+    transform: none;
+    transform-origin: center center;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    font-weight: bold;
+}
+#donate,
+#join-now {
+    position: static;
+    margin: 0;
+}
+
+#for-teenagers:hover{
+    transform: scale(1.05);
+    cursor:default;
+    background-color: #dbe4ee;
+}
+
+#heading{
+    display: grid;
+    grid-template-rows: min-content;
+    margin-top: 80px;
+    margin-left: 15px;
+}
+
+#components-svg{
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+#blueprint-logo{
+    position: absolute;
+    bottom: -30px;
+    right: -30px;
+    width: 200px;
+    height: auto;
+    z-index: 50;
+}
+
+#blueprint-logo:hover{
+    scale: 1.2;
+    transition: all 0.2s ease-in-out; 
+}
+
+
+#blueprint-text-logo{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 200px;
+    height: auto;
+}
+
+#conveyor-belt{
+    position: absolute;
+    top: 127px;
+    left: 985px;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+#build-guild-logo{
+    position: fixed;
+    top: 50%;
+    right: 18px;
+    animation: rotate 5s linear infinite paused;
+    transform: translateY(-50%);
+    transform-origin: center;
+    z-index: 50;
+}
+
+#build-guild-small-logo{
+    position: absolute;
+    top: 250px;
+    right: 305.5px;
+    animation: rotate 3.5s linear infinite paused;
+    transform-origin: center;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.normal-button{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    padding: 15px 30px;
+    background-color: #ffc857;
+    color: #0D2B52;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.5rem;
+    font-family: "R&C Basic Dark", Public Sans, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+#cta-buttons {
+    position: absolute;
+    margin-top: 2880px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+    padding: 40px 0;
+
+    width: 100%;
+    background-color: #0D2B52;
+}
+
+.normal-button:hover{
+    background-color: #ffb347;
+    transition: all 0.2s ease-in-out;
+    scale: 1.2;
+    cursor: pointer;
+}
+
+.normal-button:active{
+    background-color: #ffc857;
+    transition: all 0.2s ease-in-out;
+    scale: 0.9;
+    cursor: grabbing;
+}
+
+#donate {
+    position: static;
+    left: auto;
+    margin: 0;
+}
+
+#cursor{
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 5px;
+    height: 30px;
+    background-color: #fff;
+    pointer-events: none;
+    animation: cursor-blink 1s infinite alternate;
+}
+
+@keyframes cursor-blink {
+    from {
+        opacity: 0.2;
+    }
+    to {
+        opacity: 1;
+        transform: translateX(5px);
+    }
+}
+
+#y-axis{
+    height: 1px;
+    width: 200vw;
+    position: fixed;
+    z-index: -2;
+    background-color: #fff;
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+#x-axis{
+    height: 400vh;
+    width: 1px;
+    position: fixed;
+    z-index: -2;
+    background-color: #fff;
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+.card{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+    top: -420px;
+    position: absolute;
+    left: 15px;
+}
+
+#venue-card{
+    margin: 5px;
+    margin-left: 15px;
+    background-color: #344b6a;
+    padding: 20px;
+    border-radius: 15px;
+    width: max-content;
+    cursor: pointer;
+}
+#venue-link{
+    display: block;
+    margin-top: 10px;
+    color: #a8f0ae;
+    font-family: "R&C Basic Light", Public Sans, sans-serif;
+    font-size: 1.2rem;
+}
+
+#venue-card:hover{
+    background-color: #3e5c8a;
+    transition: all 0.2s ease-in-out;
+    scale: 1.05;
+    cursor: pointer;
+}
+
+#date-and-time-card{
+    margin: 5px;
+    margin-left: 15px;
+    background-color: #344b6a;
+    padding: 20px;
+    border-radius: 15px;
+    width: max-content;
+}
+
+#date-and-time-card:hover{
+    background-color: #3e5c8a;
+    transition: all 0.2s ease-in-out;
+    scale: 1.05;
+    cursor: default;
+}
+
+#free-food-card{
+    margin: 5px;
+    margin-left: 15px;
+    background-color: #344b6a;
+    padding: 20px;
+    border-radius: 15px;
+    width: max-content;
+}
+
+#free-food-card:hover{
+    background-color: #3e5c8a;
+    transition: all 0.2s ease-in-out;
+    scale: 1.05;
+    cursor: default;
+}
+
+#free-swag-card{
+    margin: 5px;
+    margin-left: 15px;
+    background-color: #344b6a;
+    padding: 20px;
+    border-radius: 15px;
+    width: max-content;
+}
+
+#free-swag-card:hover{
+    background-color: #3e5c8a;
+    transition: all 0.2s ease-in-out;
+    scale: 1.05;
+    cursor: default;
+}
+
+#gas-fund-card{
+    margin: 5px;
+    margin-left: 15px;
+    background-color: #344b6a;
+    padding: 20px;
+    border: none;
+    border-radius: 15px;
+    width: max-content;
+    cursor: pointer;
+}
+
+#gas-fund-card:hover{
+    background-color: #3e5c8a;
+    transition: all 0.2s ease-in-out;
+    scale: 1.05;
+    cursor: pointer;
+}
+#gas-fund-link{
+    display: block;
+    margin-top: 10px;
+    color: #a8f0ae;
+    font-family: "R&C Basic Light", Public Sans, sans-serif;
+    font-size: 1.2rem;
+}
+#age-card{
+    margin: 5px;
+    margin-left: 15px;
+    background-color: #344b6a;
+    padding: 20px;
+    border-radius: 15px;
+    width: max-content;
+    cursor: pointer;
+}
+
+#age-card:hover{
+    background-color: #3e5c8a;
+    transition: all 0.2s ease-in-out;
+    scale: 1.05;
+    cursor: default;
+}
+
+#about-heading{
+    position: absolute;
+    top: -550px;
+    left: 15px;
+    font-family: "R&C Basic Full", Public Sans, sans-serif;
+}
+
+.card p{
+    font-family: "R&C Basic Light", Public Sans, sans-serif;
+    font-size: 1.2rem;
+    color: #dbe4ee;
+    line-height: 1.5;
+    width: 300px;
+    margin-left: 0;
+}
+
+#about-content{
+    position: relative;
+    top: 650px;
+    left: 15px;
+    width: 1000px;   
+    size: 1.5rem;
+}
+
+
+.navbar{
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    font-family: "R&C Basic Dark", Public Sans, sans-serif;
+    font-size: 1.5rem;
+    background-color: #344b6a;
+    padding: 15px 30px;
+    border-radius: 15px;
+    z-index: 2;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.navbar:hover{
+    background-color: #4a5d7a;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.navbar li{
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.navbar li:hover{
+    color: #a8f0ae;
+    background-color: rgba(168, 240, 174, 0.1);
+}
+
+#nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#schedule-heading{
+    margin-top: 100px;
+    position: absolute;
+    top: 1250px;
+}
+
+#schedule-content{
+    margin-top: 100px;
+    position: absolute;
+    top: 1400px;
+    left: 15px;
+    width: 1000px;  
+    size: 1.5rem;
+}
+
+#schedule-content ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    size: 1rem;
+}
+
+.schedule-card h2{
+    font-size: 1rem;
+    color: #a8f0ae;
+    margin: 0;
+    padding: 0;
+}
+
+.schedule-card p{
+    margin-left: 15px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    font-size: 1.2rem;
+}
+
+.faq-card h2{
+    font-size: 1.5rem;
+    color: #a8f0ae;
+    margin: 0;
+    padding: 0;
+}
+
+.faq-card p{
+    font-size: 1.8rem;
+}
+
+.faq-card{
+    margin: 0;
+}
+
+.schedule-card h2{
+    font-size: 1rem;
+    color: #a8f0ae;
+    margin: 0;
+    padding: 0;
+}
+
+#schedule-card-1{
+    margin: 5px;    margin-left: 15px;    background-color: #344b6a;
+    padding: 20px;
+    border-radius: 15px;
+    width: 25rem;
+    cursor: pointer;
+}
+
+#schedule-card-1:hover{
+    background-color: #3e5c8a;
+    transition: all 0.2s ease-in-out;
+    scale: 1.05;
+    cursor: default;
+}
+
+#schedule-card-2{
+    margin: 5px;
+    margin-left: 15px;
+    background-color: #344b6a;
+    padding: 15px;
+    border-radius: 15px;
+    width: 25rem;
+    cursor: pointer;
+}
+
+#schedule-card-2:hover{
+    background-color: #3e5c8a;
+    transition: all 0.2s ease-in-out;
+    scale: 1.05;
+    cursor: default;
+}
+
+#schedule-card-3{
+    margin: 5px;
+    margin-left: 15px;
+    background-color: #344b6a;
+    padding: 15px;
+    border-radius: 15px;
+    width: 25rem;
+    cursor: pointer;
+}
+
+#schedule-card-3:hover{
+    background-color: #3e5c8a;
+    transition: all 0.2s ease-in-out;
+    scale: 1.05;
+    cursor: default;
+}
+
+#schedule-card-4{
+    margin: 5px;
+    margin-left: 15px;
+    background-color: #344b6a;
+    padding: 15px;
+    border-radius: 15px;
+    width: 25rem;
+    cursor: pointer;
+}
+
+#schedule-card-4:hover{
+    background-color: #3e5c8a;
+    transition: all 0.2s ease-in-out;
+    scale: 1.05;
+    cursor: default;
+}
+
+#schedule-card-5{
+    margin: 5px;
+    margin-left: 15px;
+    background-color: #344b6a;
+    padding: 15px;
+    border-radius: 15px;
+    width: 25rem;
+    cursor: pointer;
+}
+
+#schedule-card-5:hover{
+    background-color: #3e5c8a;
+    transition: all 0.2s ease-in-out;
+    scale: 1.05;
+    cursor: default;
+}
+
+#faq{
+    position: absolute;
+    top: 2070px;
+    margin-top: -150px;
+}
+
+#faq-heading{
+    position: relative;
+    left: 20px;
+}
+
+#faq ul{
+    list-style: none;
+}
+
+#faq p{
+    padding: 0;
+    margin: 0;
+    width: 1000px;
+}
+
+#faq-card-1{
+    margin: 20px;
+    margin-left: 15px;
+    background-color: #344b6a;
+    padding: 20px;
+    border-radius: 15px;
+    width: max-content;
+    cursor: pointer;
+}
+
+#faq-card-1:hover{
+    background-color: #3e5c8a;
+    transition: all 0.2s ease-in-out;
+    scale: 1.05;
+    cursor: default;
+}
+
+#faq-card-2{
+    margin: 20px;
+    margin-left: 15px;
+    background-color: #344b6a;
+    padding: 20px;
+    border-radius: 15px;
+    width: max-content;
+    cursor: pointer;
+}
+
+#faq-card-2:hover{
+    background-color: #3e5c8a;
+    transition: all 0.2s ease-in-out;
+    scale: 1.05;
+    cursor: default;
+}
+
+#faq-card-3{
+    margin: 20px;
+    margin-left: 15px;
+    background-color: #344b6a;
+    padding: 20px;
+    border-radius: 15px;
+    width: max-content;
+    cursor: pointer;
+}
+
+#faq-card-3:hover{
+    background-color: #3e5c8a;
+    transition: all 0.2s ease-in-out;
+    scale: 1.1;
+    cursor: default;
+}
+
+#faq-card-4{
+    margin: 20px;
+    margin-left: 15px;
+    background-color: #344b6a;
+    padding: 20px;
+    border-radius: 15px;
+    width: max-content;
+    cursor: pointer;
+}
+
+#faq-card-3:hover{
+    background-color: #3e5c8a;
+    transition: all 0.2s ease-in-out;
+    scale: 1.05;
+    cursor: default;
+}
+
+#faq-card-5{
+    margin: 20px;
+    margin-left: 15px;
+    background-color: #344b6a;
+    padding: 20px;
+    border-radius: 15px;
+    width: max-content;
+    cursor: pointer;
+}
+
+#faq-card-5:hover{
+    background-color: #3e5c8a;
+    transition: all 0.2s ease-in-out;
+    scale: 1.05;
+    cursor: default;
+}
+
+#faq-card-6{
+    margin: 20px;
+    margin-left: 15px;
+    background-color: #344b6a;
+    padding: 20px;
+    border-radius: 15px;
+    width: max-content;
+    cursor: pointer;
+}
+
+#faq-card-4:hover{
+    background-color: #3e5c8a;
+    transition: all 0.2s ease-in-out;
+    scale: 1.05;
+    cursor: default;
+}
+
+#1sponsors{
+    position: absolute;
+    top: 3120px;
+}
+
+#hackclub-logo{
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: 3150px;
+    left: 50px;
+}
+
+.sponsor-logo{
+    visibility: hidden;
+}
+
+#hackclub-text{
+    color: #dbe4ee;
+    font-size: 8em;
+    width: 800px;
+    word-spacing: -20px;
+    height: auto;
+    position: absolute;
+    top: 3150px;
+    left: 300px;
+}
+#sponsors-heading{
+    position: absolute;
+    top: 2990px;
+    left: 15px;
+    font-family: "R&C Basic Full", Public Sans, sans-serif;
+}
+
+@keyframes scroll-animation {
+    from {
+        opacity: 0;
+    }
+    to {
+        translate: transformX(100px);
+        opacity: 1;
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+@font-face {
+    font-family: "R&C Basic Empty";
+    src: url(./fonts/RC-BasicEmpty\ \(1\).ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "R&C Basic Dark";
+    src: url(./fonts/RC-BasicDark.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "R&C Basic Full";
+    src: url(./fonts/RC-BasicFull\ \(1\).ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "R&C Basic Light";
+    src: url(./fonts/RC-BasicLight.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "R&C Guidelines";
+    src: url(./fonts/RC-GuidelinesLight.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "R&C Guidelines Dark";
+    src: url(./fonts/RC-GuidelinesDark.ttf) format("truetype");
+}
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+        width: auto;
+        margin-left: 10px;
+    }
+
+    .card {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        position: relative;
+        top: auto;
+        left: auto;
+        margin: 1.5rem 10px 0;
+        width: auto;
+    }
+
+    .card p {
+        width: auto;
+        font-size: 1rem;
+    }
+
+    #venue-card,
+    #date-and-time-card,
+    #free-food-card,
+    #free-swag-card,
+    #gas-fund-card,
+    #age-card {
+        width: 100%;
+        max-width: 100%;
+        padding: 15px;
+        margin: 0.75rem auto;
+    }
+
+    #schedule-content ul {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    #schedule-card-1,
+    #schedule-card-2,
+    #schedule-card-3,
+    #schedule-card-4,
+    #schedule-card-5 {
+        width: 100%;
+        max-width: 100%;
+        padding: 15px;
+        margin: 0.75rem auto;
+    }
+
+    #schedule-content {
+        width: 100%;
+        margin: 0 10px;
+        position: relative;
+        left: auto;
+        top: auto;
+    }
+
+    #faq-card-1,
+    #faq-card-2,
+    #faq-card-3,
+    #faq-card-4,
+    #faq-card-5,
+    #faq-card-6 {
+        width: 100%;
+        max-width: 100%;
+        padding: 15px;
+        margin: 0.75rem auto;
+    }
+
+    .faq-card p {
+        font-size: 1rem;
+        width: auto;
+    }
+
+    #about-content,
+    #faq,
+    #sponsors {
+        width: 100%;
+        position: relative;
+        left: auto;
+        top: auto;
+        margin: 1.5rem 10px 0;
+    }
+
+    #hackclub-logo {
+        position: relative;
+        width: 150px;
+        top: auto;
+        left: auto;
+        margin: 1rem auto 0;
+    }
+
+    #hackclub-text {
+        position: relative;
+        font-size: 4rem;
+        width: 100%;
+        left: auto;
+        top: auto;
+        margin: 1rem 10px 0;
+    }
+
+    .navbar {
+        width: calc(100% - 20px);
+        max-width: 100%;
+        gap: 15px;
+        padding: 10px 10px;
+        flex-wrap: wrap;
+    }
+
+    .navbar li {
+        font-size: 1.1rem;
+        padding: 5px 10px;
+    }
+
+    #by-teenagers,
+    #for-teenagers {
+        max-width: 100px;
+        font-size: 0.7rem;
+        margin: 0.3rem 3px;
+        padding: 4px 8px;
+    }
+    .normal-button {
+    display: flex; /* change from inline-flex */
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    max-width: 320px;
+    
+    bottom: 10px; /* or 20px */
+    padding: 14px 16px;
+    font-size: 1rem;
+
+    white-space: nowrap; /* prevent text break/disappear */}
+    #cta-buttons{
+        margin-top: 30px;
+    }
+}
+
+
+@media (max-width: 498px) {
+    body {
+        padding: 10px 8px 90px 8px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        word-spacing: -10px;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+        margin-bottom: 8px;
+    }
+
+    p {
+        font-size: 0.95rem;
+        width: auto;
+        max-width: 100%;
+        margin: 0 8px 0.8rem;
+        line-height: 1.4;
+    }
+
+    #heading {
+        margin: 40px 8px 0;
+        position: relative;
+    }
+
+    #nagpur {
+        font-size: 2.2rem;
+        bottom: 0;
+        display: block;
+        text-align: center;
+        margin: 10px auto 0;
+    }
+
+    #by-teenagers,
+    #for-teenagers {
+        max-width: 95px;
+        width: auto;
+        font-size: 0.65rem;
+        margin: 0.3rem 3px;
+        transform: none;
+        padding: 4px 8px;
+    }
+
+    #blueprint-logo,
+    #blueprint-text-logo,
+    #build-guild-logo,
+    #build-guild-small-logo,
+    #conveyor-belt,
+    #components-svg,
+    #y-axis,
+    #x-axis {
+        display: none;
+    }
+
+    .card {
+        position: static;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        left: auto;
+        top: auto;
+        margin: 1.2rem 8px 0;
+        width: auto;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+        width: auto;
+        margin-left: 0;
+    }
+
+    #venue-card,
+    #date-and-time-card,
+    #free-food-card,
+    #free-swag-card,
+    #gas-fund-card,
+    #age-card,
+    #faq-card-1,
+    #faq-card-2,
+    #faq-card-3,
+    #faq-card-4,
+    #faq-card-5,
+    #faq-card-6,
+    #schedule-card-1,
+    #schedule-card-2,
+    #schedule-card-3,
+    #schedule-card-4,
+    #schedule-card-5 {
+        width: 100%;
+        max-width: calc(100% - 16px);
+        padding: 12px;
+        margin: 0.6rem auto;
+        border-radius: 10px;
+    }
+
+    #about-heading,
+    #sponsors-heading,
+    #faq-heading,
+    #schedule-heading {
+        position: relative;
+        left: auto;
+        top: auto;
+        margin: 1.2rem 8px 0;
+        font-size: 1.8rem;
+    }
+
+    #about-content,
+    #schedule-content,
+    #faq,
+    #sponsors {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: auto;
+        margin: 0 8px;
+    }
+
+    #schedule-content ul {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+
+    #schedule-content {
+        margin: 0 8px;
+    }
+
+    #faq p {
+        width: auto;
+        font-size: 0.9rem;
+    }
+
+    .faq-card summary {
+        font-size: 1.1rem;
+        padding: 14px 16px;
+    }
+
+    .faq-card p {
+        font-size: 0.9rem;
+    }
+
+    #hackclub-logo {
+        position: relative;
+        top: auto;
+        left: auto;
+        display: block;
+        margin: 1rem auto 0;
+        width: 100px;
+    }
+
+    #hackclub-text {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: auto;
+        font-size: 2rem;
+        margin: 0.8rem 8px 0;
+        word-spacing: -8px;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% - 16px);
+        max-width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 8px 10px;
+        line-height: 1.2;
+        font-size: 1.1rem;
+    }
+
+    .navbar li {
+        padding: 4px 8px;
+        font-size: 0.85rem;
+    }
+
+    .normal-button {
+    display: flex; /* change from inline-flex */
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 10px;
+    margin-bottom: 200px;
+    padding: 14px 16px;
+    font-size: 1rem;
+
+    white-space: nowrap; /* prevent text break/disappear */
+     }
+
+    #donate,
+    #join-now,
+    .normal-button {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 12px 10px;
+        font-size: 1em;
+        border-radius: 12px;
+    }
+
+    .normal-button:hover {
+        scale: 1.05;
+    }
+
+    .normal-button:active {
+        scale: 0.95;
+    }
+}
+
+@font-face {
+    font-family: "R&C Guidelines Empty";
+    src: url(./fonts/RC-GuidelinesEmpty.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "R&C Guidelines Full";
+    src: url(./fonts/RC-GuidelinesFull.ttf) format("truetype");
+}
+
+
+ /* FAQ accordion styles - added without touching style.css */
+        #faq-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .faq-card {
+            background-color: #344b6a;
+            border-radius: 12px;
+            margin: 12px 0;
+            overflow: hidden;
+            transition: background-color 0.3s ease;
+        }
+        .faq-card[open] {
+            background-color: #3e5a7f;
+        }
+        .faq-card summary {
+            list-style: none;
+            cursor: pointer;
+            padding: 18px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #ffffff;
+            user-select: none;
+        }
+        .faq-card summary::-webkit-details-marker {
+            display: none;
+        }
+        .faq-card summary::after {
+            content: "+";
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: #a8f0ae;
+            transition: transform 0.3s ease;
+            margin-left: 16px;
+            line-height: 1;
+        }
+        .faq-card[open] summary::after {
+            transform: rotate(45deg);
+        }
+        .faq-card p {
+            padding: 0 24px 20px 24px;
+            margin: 0;
+            color: #d0dae8;
+            line-height: 1.6;
+            animation: faqFadeIn 0.35s ease;
+        }
+        @keyframes faqFadeIn {
+            from { opacity: 0; transform: translateY(-6px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
